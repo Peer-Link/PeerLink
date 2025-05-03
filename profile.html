@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>User Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="profile-body">
+  <div id="profile-page">
+    <div class="profile-header">
+      <img src="images/female_avatar.png" alt="Avatar" class="avatar" />
+      <span class="username">Mihlali</span>
+    </div>
+
+    <div class="profile-info">
+      <p><strong>Bio:</strong> Passionate about farming and community growth.</p>
+      <p><strong>Skills:</strong> Organic farming, public speaking</p>
+    </div>
+
+    <button class="edit-btn" onclick="toggleEdit()">Edit Profile</button>
+
+    <form id="edit-form" style="display: none;">
+      <label for="bio">Bio:</label>
+      <textarea id="bio" name="bio" rows="4" placeholder="Tell us about yourself..."></textarea>
+
+      <label for="skills">Skills:</label>
+      <input type="text" id="skills" name="skills" placeholder="E.g., harvesting, negotiation"/>
+
+      <label for="avatar">Choose Avatar:</label>
+      <div class="avatar-options">
+        <label>
+          <input type="radio" name="avatar" value="male">
+          <img src="images/male_avatar.png" alt="Male Avatar" />
+        </label>
+        <label>
+          <input type="radio" name="avatar" value="female">
+          <img src="images/female_avatar.png" alt="Female Avatar" />
+        </label>
+      </div>
+
+      <input type="submit" value="Save Changes"/>
+    </form>
+  </div>
+
+  <script>
+    function toggleEdit() {
+      const form = document.getElementById("edit-form");
+      form.style.display = form.style.display === "none" ? "block" : "none";
+    }
+  </script>
+</body>
+</html>
