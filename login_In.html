@@ -5,23 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Log In</title>
   <link rel="stylesheet" href="styles.css">
-  
-    
 </head>
 <body>
-<div class="container">
-  <h2>PeerLink</h2>
-  <h1>Login</h1>
-  <form action="/login_in" method="POST">
-    <label for="email">Email:</label><br>
-    <input type="email" id="email" name="email" required><br><br>
-    
-    <label for="password">Password:</label><br>
-    <input type="password" id="password" name="password" required><br><br>
-    
-    <input type="submit" value="Log In">
-    <p>Don't have an account? <a href="/signup">Log in here</a>.</p>
-  </form>
-</div>
+  <div class="container">
+    <h2>PeerLink</h2>
+    <h1>Login</h1>
+    <form id="loginForm">
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="password">Password:</label><br>
+      <input type="password" id="password" name="password" required><br><br>
+
+      <!-- Submit button with id for JavaScript -->
+      <input type="submit" value="Log In" id="loginBtn">
+      <p>Don't have an account? <a href="sign_up.html">Sign up here</a>.</p>
+    </form>
+  </div>
+
+  <script>
+    // Handle form submission to login
+    document.getElementById('loginForm').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      // Redirect to the interests.html page (not login_In.html)
+      window.location.href = "interests.html";
+    });
+  </script>
 </body>
 </html>

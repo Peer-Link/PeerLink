@@ -9,20 +9,30 @@
 <body class="interests-page">
     <div class="grid-containers">
         <div class="form-box">
-      <button>Profile Set Up</button>
-      <p>👽</p>
-      <h3>Welcome! How can we support you today?</h3>
-      <hr>
-      <h1>🤼Collaboration</h1>
-      <hr>
-      <h1>👐Offer</h1>
-      <hr>
-      <h1>❓Request</h1>
-      <hr>
-      <h1>🤝Swap</h1>
-      <hr>
+            <button id="profileBtn">Profile Set Up</button>
+            <p>👽</p>
+            <h3>Welcome! How can we support you today?</h3>
+            <hr>
+            <!-- Add links to the headings -->
+            <h1><a href="collaboration.html">🤼Collaboration</a></h1>
+            <hr>
+            <h1><a href="offer.html">👐Offer</a></h1>
+            <hr>
+            <h1><a href="request.html">❓Request</a></h1>
+            <hr>
+            <h1><a href="swap.html">🤝Swap</a></h1>
+            <hr>
+            <h1><a href="support.html">Support Groups</a></h1>
+            <hr>
+        </div>
     </div>
-    </div>
-  </body>
+
+    <script>
+        // Redirect to profile page on button click
+        document.getElementById('profileBtn').addEventListener('click', function() {
+          window.location.href = 'profile.html';
+        });
+      </script>
     
+</body>
 </html>
